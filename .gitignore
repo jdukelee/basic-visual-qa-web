@@ -1,0 +1,4 @@
+.*
+gemini-reports/
+node_modules/
+!/.gitignore

@@ -1,0 +1,27 @@
+rootUrl: ''
+gridUrl: 'http://127.0.0.1:4444/wd/hub'
+tolerance: 2.3
+windowSize: 375x667
+compositeImage: true
+calibrate: false
+browsers:
+  chrome:
+    desiredCapabilities:
+      browserName: chrome
+  # BROKEN: Latest ff version 57 not compatible with latest selenium server 3.8.1
+  # firefox:
+  #   calibrate: true
+  #   desiredCapabilities:
+  #     browserName: firefox
+  # safari:
+  #   desiredCapabilities:
+  #     browserName: safari
+system:
+  projectRoot: ../../
+  plugins:
+    'html-reporter':
+      enabled: true
+      path: './gemini-reports/fullpage-mobile'
+  ctx: {
+    viewportType : 'mobile'
+  }
