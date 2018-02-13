@@ -10,7 +10,7 @@ browsers:
   chrome-mobile-viewport:
     desiredCapabilities:
       browserName: chrome
-    windowSize: 375x667
+    windowSize: 425x667  # Viewport width < 425 renders inconsistent images due to horizontal scroll.
   chrome-tablet-viewport:
     desiredCapabilities:
       browserName: chrome
