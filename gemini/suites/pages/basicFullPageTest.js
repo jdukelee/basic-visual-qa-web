@@ -6,9 +6,9 @@
  */
 // File path variables
 var currDir = process.cwd();
-var runnerLib = currDir + '/lib/runners';
+var runnerLib = currDir + '/lib/test-functions';
 // Required modules
-var testRunner = require(runnerLib + '/fullPageRunner');
+var testRunner = require(runnerLib + '/fullPageTestFunctions');
 
 // Values used for the full page test runner.
 var pageName = 'Oh, so they have internet on computers now!';
