@@ -1,0 +1,36 @@
+rootUrl: 'https://ascensus.weareenvoy.net'
+gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+tolerance: 2.3
+compositeImage: true
+browsers:
+  win-ie-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : IE
+      browser_version : 11.0
+  win-edge-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : Edge
+      browser_version : 16.0
+# Defines the set of tests to run. Command line option needs to specify '--set <set name>'
+sets:
+  IE-Edge:
+    files:
+      - gemini/suites/ascensus/*Desktop.js
+    browsers:
+      - win-ie-desktop-viewport
+      - win-edge-desktop-viewport
+system:
+  projectRoot: ../../
+  plugins:
+    html-reporter/gemini:
+      enabled: true
+      path: './gemini-reports/ascensus/ie-edge'
+  ctx: {
+    foo: 'bar'
+  }
