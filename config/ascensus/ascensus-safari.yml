@@ -22,6 +22,7 @@ system:
   plugins:
     html-reporter/gemini:
       enabled: true
+      scaleImages: true
       path: './gemini-reports/ascensus/safari'
   ctx: {
     foo: 'bar'
