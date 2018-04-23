@@ -3,6 +3,9 @@ gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/h
 tolerance: 2.3
 compositeImage: true
 browsers:
+  chrome:
+    desiredCapabilities:
+      browserName: chrome
   win-chrome-desktop-viewport:
     windowSize: 1280x1024
     desiredCapabilities:
@@ -61,7 +64,8 @@ sets:
     files:
       - gemini/suites/pages/basicFullPageTest.js
     browsers:
-      - win-chrome-desktop-viewport
+      # - win-chrome-desktop-viewport
+      - chrome
 system:
   projectRoot: ../
   plugins:
