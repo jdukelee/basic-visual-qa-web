@@ -1,0 +1,100 @@
+rootUrl: 'http://stage.cobird.com/'
+gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+tolerance: 2.3
+compositeImage: true
+browsers:
+  chrome:
+    desiredCapabilities:
+      browserName: chrome
+  win-chrome-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : Chrome
+      browser_version : 62.0
+  win-ff-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : Firefox
+      browser_version : 47.0
+      browserstack.selenium_version: 2.53.1
+  win-ie-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : IE
+      browser_version : 11.0
+  win-edge-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : Windows
+      os_version : 10
+      browserName : Edge
+      browser_version : 16.0
+  highsierra-safari-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : OS X
+      os_version : High Sierra
+      browserName : Safari
+      browser_version : 11.0
+  highsierra-chrome-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : OS X
+      os_version : High Sierra
+      browserName : Chrome
+      browser_version : 65.0
+      browserstack.selenium_version : 3.5.2
+  highsierra-ff-desktop-viewport:
+    windowSize: 1280x1024
+    desiredCapabilities:
+      os : OS X
+      os_version : High Sierra
+      browserName : Firefox
+      browser_version : 47.0
+      browserstack.selenium_version: 2.53.1
+# Defines the set of tests to run. Command line option needs to specify '--set <set name>'
+sets:
+  chrome-default:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - chrome
+  safari:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - highsierra-safari-desktop-viewport
+  ie-edge:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ie-desktop-viewport
+      - win-edge-desktop-viewport
+  firefox:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ff-desktop-viewport
+      - highsierra-ff-desktop-viewport
+  chrome-crossos:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - highsierra-chrome-desktop-viewport
+      - win-chrome-desktop-viewport
+system:
+  projectRoot: ../../
+  plugins:
+    html-reporter/gemini:
+      enabled: true
+      scaleImages: true
+      path: './gemini-reports/sampleproject/device'
+  ctx: {
+    foo: 'bar'
+  }
