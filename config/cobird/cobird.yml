@@ -1,9 +1,9 @@
 rootUrl: 'http://stage.cobird.com/'
-gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+gridUrl: 'http://0.0.0.0:4444/wd/hub'  #'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
 tolerance: 2.3
 compositeImage: true
 browsers:
-  chrome:
+  chrome-default:
     desiredCapabilities:
       browserName: chrome
   win-chrome-desktop-viewport:
@@ -64,7 +64,7 @@ sets:
     files:
       - gemini/suites/cobird/*Desktop.js
     browsers:
-      - chrome
+      - chrome-default
   safari:
     files:
       - gemini/suites/cobird/*Desktop.js
@@ -94,7 +94,7 @@ system:
     html-reporter/gemini:
       enabled: true
       scaleImages: true
-      path: './gemini-reports/sampleproject/device'
+      path: './gemini-reports/cobird'
   ctx: {
     foo: 'bar'
   }

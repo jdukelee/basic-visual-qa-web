@@ -1,9 +1,11 @@
 rootUrl: 'https://www.google.com'
-gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+gridUrl: 'http://0.0.0.0:4444/wd/hub'  # Run on local selenium-server standalone
+#gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'  # Run on Browserstack hub
+#gridUrl: 'http://127.0.0.1:4444/wd/hub'  # Run on local docker container grid
 tolerance: 2.3
 compositeImage: true
 browsers:
-  chrome:
+  chrome-default:
     desiredCapabilities:
       browserName: chrome
   win-chrome-desktop-viewport:
@@ -64,8 +66,7 @@ sets:
     files:
       - gemini/suites/pages/basicFullPageTest.js
     browsers:
-      # - win-chrome-desktop-viewport
-      - chrome
+      - chrome-default
 system:
   projectRoot: ../
   plugins:
