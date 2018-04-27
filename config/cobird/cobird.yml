@@ -1,7 +1,10 @@
 rootUrl: 'http://stage.cobird.com/'
-gridUrl: 'http://0.0.0.0:4444/wd/hub'  #'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+# gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
+gridUrl: 'http://0.0.0.0:4444/wd/hub'
 tolerance: 2.3
 compositeImage: true
+screenshotDelay: 2000   # With composite image true, when gemini needs to scroll to capture elements it will wait 2 seconds between each capture.
+screenshotsDir: ./gemini/screens/cobird
 browsers:
   chrome-default:
     desiredCapabilities:
