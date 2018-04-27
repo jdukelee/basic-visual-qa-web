@@ -62,7 +62,24 @@ browsers:
       browserstack.selenium_version: 2.53.1
 # Defines the set of tests to run. Command line option needs to specify '--set <set name>'
 sets:
-  chrome-crossos:
+  safari:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - highsierra-safari-desktop-viewport
+  ie-edge:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ie-desktop-viewport
+      - win-edge-desktop-viewport
+  firefox:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ff-desktop-viewport
+      - highsierra-ff-desktop-viewport
+  chrome:
     files:
       - gemini/suites/cobird/*Desktop.js
     browsers:
@@ -74,7 +91,7 @@ system:
     html-reporter/gemini:
       enabled: true
       scaleImages: true
-      path: './gemini-reports/cobird/chrome'
+      path: './gemini-reports/cobird'
   ctx: {
     foo: 'bar'
   }

@@ -86,7 +86,7 @@ sets:
     browsers:
       - win-ff-desktop-viewport
       - highsierra-ff-desktop-viewport
-  chrome-crossos:
+  chrome:
     files:
       - gemini/suites/cobird/*Desktop.js
     browsers:
