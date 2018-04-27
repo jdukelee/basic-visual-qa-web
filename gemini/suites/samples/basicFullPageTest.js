@@ -14,4 +14,4 @@ var testRunner = require(runnerLib + '/fullPageTestFunctions');
 var pageName = 'Oh, so they have internet on computers now!';
 var pageUrlPath = '/'; 
 
-testRunner.runFullPageScreenshot(pageName, pageUrlPath);
+testRunner.runFullPageScreenshot('demo-' + pageName, pageUrlPath);
