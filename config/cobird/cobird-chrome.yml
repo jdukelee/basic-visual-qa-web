@@ -1,6 +1,5 @@
 rootUrl: 'http://stage.cobird.com/'
-# gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
-gridUrl: 'http://0.0.0.0:4444/wd/hub'
+gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'
 tolerance: 2.3
 compositeImage: true
 screenshotDelay: 2000   # With composite image true, when gemini needs to scroll to capture elements it will wait 2 seconds between each capture.
@@ -63,28 +62,6 @@ browsers:
       browserstack.selenium_version: 2.53.1
 # Defines the set of tests to run. Command line option needs to specify '--set <set name>'
 sets:
-  chrome-default:
-    files:
-      - gemini/suites/cobird/*Desktop.js
-    browsers:
-      - chrome-default
-  safari:
-    files:
-      - gemini/suites/cobird/*Desktop.js
-    browsers:
-      - highsierra-safari-desktop-viewport
-  ie-edge:
-    files:
-      - gemini/suites/cobird/*Desktop.js
-    browsers:
-      - win-ie-desktop-viewport
-      - win-edge-desktop-viewport
-  firefox:
-    files:
-      - gemini/suites/cobird/*Desktop.js
-    browsers:
-      - win-ff-desktop-viewport
-      - highsierra-ff-desktop-viewport
   chrome-crossos:
     files:
       - gemini/suites/cobird/*Desktop.js
@@ -97,7 +74,7 @@ system:
     html-reporter/gemini:
       enabled: true
       scaleImages: true
-      path: './gemini-reports/cobird'
+      path: './gemini-reports/cobird/chrome'
   ctx: {
     foo: 'bar'
   }

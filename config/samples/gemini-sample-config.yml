@@ -64,11 +64,34 @@ browsers:
       browserstack.selenium_version: 2.53.1
 # Defines the set of tests to run. Command line option needs to specify '--set <set name>'
 sets:
-  sample:
+  chrome-default:
     files:
-      - gemini/suites/samples/basicFullPageTest.js
+      - gemini/suites/cobird/*Desktop.js
     browsers:
       - chrome-default
+  safari:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - highsierra-safari-desktop-viewport
+  ie-edge:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ie-desktop-viewport
+      - win-edge-desktop-viewport
+  firefox:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - win-ff-desktop-viewport
+      - highsierra-ff-desktop-viewport
+  chrome-crossos:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - highsierra-chrome-desktop-viewport
+      - win-chrome-desktop-viewport
 system:
   projectRoot: ../../
   plugins:
