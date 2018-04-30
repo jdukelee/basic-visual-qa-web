@@ -1,6 +1,6 @@
-rootUrl: https://www.vizio.com
-gridUrl: 'http://0.0.0.0:4444/wd/hub'  # Run on local selenium-server standalone
-#gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'  # Run on Browserstack hub
+rootUrl: 'https://github.com/gemini-testing/gemini'
+#gridUrl: 'http://0.0.0.0:4444/wd/hub'  # Run on local selenium-server standalone
+gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'  # Run on Browserstack hub
 # gridUrl: 'http://127.0.0.1:4444/wd/hub'  # Run on local docker container grid
 tolerance: 2.3
 compositeImage: true
@@ -66,29 +66,29 @@ browsers:
 sets:
   chrome-default:
     files:
-      - gemini/suites/cobird/*Desktop.js
+      - gemini/suites/samples/*.js
     browsers:
       - chrome-default
   safari:
     files:
-      - gemini/suites/cobird/*Desktop.js
+      - gemini/suites/samples/*.js
     browsers:
       - highsierra-safari-desktop-viewport
   ie-edge:
     files:
-      - gemini/suites/cobird/*Desktop.js
+      - gemini/suites/samples/*.js
     browsers:
       - win-ie-desktop-viewport
       - win-edge-desktop-viewport
   firefox:
     files:
-      - gemini/suites/cobird/*Desktop.js
+      - gemini/suites/samples/*.js
     browsers:
       - win-ff-desktop-viewport
       - highsierra-ff-desktop-viewport
   chrome:
     files:
-      - gemini/suites/cobird/*Desktop.js
+      - gemini/suites/samples/*.js
     browsers:
       - highsierra-chrome-desktop-viewport
       - win-chrome-desktop-viewport
