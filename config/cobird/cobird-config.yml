@@ -85,6 +85,11 @@ sets:
     browsers:
       - highsierra-chrome-desktop-viewport
       - win-chrome-desktop-viewport
+  chrome-default:
+    files:
+      - gemini/suites/cobird/*Desktop.js
+    browsers:
+      - chrome-default
 system:
   projectRoot: ../../
   plugins:
