@@ -1,5 +1,5 @@
 rootUrl: 'https://github.com/gemini-testing/gemini'
-#gridUrl: 'http://0.0.0.0:4444/wd/hub'  # Run on local selenium-server standalone
+# gridUrl: 'http://0.0.0.0:4444/wd/hub'  # Run on local selenium-server standalone
 gridUrl: 'https://jonlee567:z7sR4zHk6W2AX37u28tr@hub-cloud.browserstack.com/wd/hub'  # Run on Browserstack hub
 # gridUrl: 'http://127.0.0.1:4444/wd/hub'  # Run on local docker container grid
 tolerance: 2.3
@@ -10,6 +10,9 @@ browsers:
   chrome-default:
     desiredCapabilities:
       browserName: chrome
+  firefox-default:
+    desiredCapabilities:
+      browserName: firefox
   win-chrome-desktop-viewport:
     windowSize: 1280x1024
     desiredCapabilities:
@@ -69,6 +72,11 @@ sets:
       - gemini/suites/samples/*.js
     browsers:
       - chrome-default
+  firefox-default:
+    files:
+      - gemini/suites/samples/*.js
+    browsers:
+      - firefox-default      
   safari:
     files:
       - gemini/suites/samples/*.js
