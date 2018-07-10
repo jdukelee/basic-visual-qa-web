@@ -33,17 +33,17 @@ function captureSection(sectionId) {
     });
 }
 
-/**
- * Suite to capture the initial intro view, which afterwards, fades into the landing page content.
- */
-gemini.suite('fade-intro', function(suite) {
-    suite
-        .setUrl('/')
-        .setCaptureElements('#js-section-one')
-        .setTolerance(20)
-        .capture('intro', function(actions, find) {
-        });
-});
+// /**
+//  * Suite to capture the initial intro view, which afterwards, fades into the landing page content.
+//  */
+// gemini.suite('fade-intro', function(suite) {
+//     suite
+//         .setUrl('/')
+//         .setCaptureElements('#js-section-one')
+//         .setTolerance(20)
+//         .capture('intro', function(actions, find) {
+//         });
+// });
 
 /**
  * Run tests on main sections.
