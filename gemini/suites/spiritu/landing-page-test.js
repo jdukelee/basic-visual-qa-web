@@ -36,7 +36,7 @@ function captureSection(sectionId) {
 /**
  * Suite to capture the initial intro view, which afterwards, fades into the landing page content.
  */
-gemini.suite('intro', function(suite) {
+gemini.suite('Fade-intro', function(suite) {
     suite
         .setUrl('/')
         .setCaptureElements('#js-section-one')
