@@ -109,8 +109,8 @@ system:
   plugins:
     html-reporter/gemini:
       enabled: true
-      scaleImages: true
       path: './gemini-reports/spiritu'
+      defaultView: 'failed'
   ctx: {
     foo: 'bar'
   }
