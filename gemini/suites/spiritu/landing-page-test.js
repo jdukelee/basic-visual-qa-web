@@ -11,7 +11,7 @@ let sectionIds = [
     'js-section-two',
     'js-section-three',
     'js-section-four',
-    'js-section-five',
+    // 'js-section-five', // Section five has been removed, hidden
     'js-section-six'
 ]
 
